@@ -16,15 +16,7 @@ export default {
   name: 'layout',
   components: {
     Tabbar
-  },
-  props: {},
-  data: function() {
-    return {
-      itemList: []
-    };
-  },
-  computed: {},
-  methods: {}
+  }
 };
 </script>
 
@@ -35,7 +27,7 @@ export default {
 
 .bb-main {
   width: 100%;
-  height: calc(100% - 48px);
+  height: 620px;
 }
 
 .bb-footer {

@@ -1,3 +1,4 @@
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
 * {
   box-sizing: border-box;
 }
@@ -73,4 +74,16 @@ button:hover {
   height: 1em;
   vertical-align: -0.15em;
   overflow: hidden;
+}
+
+@font-face {
+  font-family: "Candy_Number-webfont";
+  src: url("../font/candynumber.eot");
+}
+
+@font-face {
+  font-family: "Candy_Number-webfont";
+  src: url(//:) format("no404"), url("../font/candynumber.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
