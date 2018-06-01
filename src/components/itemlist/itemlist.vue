@@ -21,6 +21,9 @@
         </p-check>
       </bb-col>
     </div>
+    <div class='bb-item-add'>
+      <i class='iconfont bb-item-add-icon icon-tianjia'></i>
+    </div>
   </div>
 </template>
 
@@ -46,7 +49,9 @@ export default {
 
 <style lang='scss' type='text/css' scoped>
 .bb-item-list {
+  height: 100%;
   padding: 8px 0;
+  overflow: auto;
   .bb-item {
     height: 80px;
     width: 360px;
@@ -54,6 +59,7 @@ export default {
     padding: 4px;
     border: 1px solid #cccccc;
     border-radius: 4px;
+    background-color: #ffffff;
     .bb-item-icon-container {
       height: 48px;
       border-right: 1px solid #eeeeee;
@@ -70,7 +76,8 @@ export default {
       border-right: 1px solid #eeeeee;
       font-family: 'Candy_Number-webfont';
       font-size: 20px;
-      color: #ffffff;
+      // color: #ffffff;
+      color: #4d4d4d;
       text-align: center;
     }
     .bb-item-time-info {
@@ -110,34 +117,49 @@ export default {
   }
 }
 
-.bb-item-fitness {
-  background: linear-gradient(to bottom, #fdd99a, #ff8692);
+.bb-item-add {
+  height: 80px;
+  width: 360px;
+  margin: 0 auto 4px auto;
+  padding: 4px;
+  border: 1px dashed #cccccc;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 76px;
+  background-color: #ffffff;
+  .bb-item-add-icon {
+    font-size: 20px;
+  }
 }
+
 .bb-item-icon-fitness {
   background: url(./images/fitness.png);
-}
-.bb-item-study {
-  background: linear-gradient(to bottom, #57e3b7, #23cac4);
 }
 .bb-item-icon-study {
   background: url(./images/study.png);
 }
-.bb-item-travel {
-  background: linear-gradient(to bottom, #50e3f0, #66adfe);
-}
 .bb-item-icon-travel {
   background: url(./images/travel.png);
-}
-.bb-item-rise {
-  background: linear-gradient(to bottom, #fedc67, #ff8866);
 }
 .bb-item-icon-rise {
   background: url(./images/rise.png);
 }
-.bb-item-sleep {
-  background: linear-gradient(to bottom, #fdd99a, #ff8692);
-}
 .bb-item-icon-sleep {
   background: url(./images/sleep.png);
 }
+// .bb-item-fitness {
+//   background: linear-gradient(to bottom, #fdd99a, #ff8692);
+// }
+// .bb-item-study {
+//   background: linear-gradient(to bottom, #57e3b7, #23cac4);
+// }
+// .bb-item-travel {
+//   background: linear-gradient(to bottom, #50e3f0, #66adfe);
+// }
+// .bb-item-rise {
+//   background: linear-gradient(to bottom, #fedc67, #ff8866);
+// }
+// .bb-item-sleep {
+//   background: linear-gradient(to bottom, #fdd99a, #ff8692);
+// }
 </style>
