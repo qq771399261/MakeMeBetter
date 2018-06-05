@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='bb-item-page'>
     <div class='bg-top'></div>
     <div class='bg-bottom'></div>
     <div class='search-container'>
@@ -178,7 +178,7 @@ export default {
   position: absolute;
   top: 160px;
   left: 0px;
-  height: 460px;
+  height: calc(100% - 160px);
   width: 375px;
   background: #f0f0f0;
   z-index: -1;
@@ -200,7 +200,11 @@ export default {
   background: #ffffff;
 }
 .item-container {
-  height: 434px;
-  margin-top: 6px;
+  height: calc(100% - 182px);
+}
+
+.bb-item-page {
+  height: 100%;
+  width: 375px;
 }
 </style>

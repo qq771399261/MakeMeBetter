@@ -26,8 +26,8 @@ export default {
 }
 
 .bb-main {
-  width: 100%;
-  height: 620px;
+  width: 375px;
+  height: calc(100% - 50px);
 }
 
 .bb-footer {
@@ -35,6 +35,7 @@ export default {
   bottom: 0px;
   left: 0px;
   height: 48px;
-  width: 100%;
+  width: 375px;
+  z-index: 10px;
 }
 </style>

@@ -11,9 +11,11 @@
         </div>
       </bb-col>
       <bb-col :span='18'>
-        <div class='bb-item-title'>{{item.title}}</div>
-        <div class='bb-item-content'>{{item.content}}</div>
-        <div class='bb-item-time'>{{item.time[0]+'~'+item.time[1]}}</div>
+        <div @click='(ev)=>{detail(item.id)}'>
+          <div class='bb-item-title'>{{item.title}}</div>
+          <div class='bb-item-content'>{{item.content}}</div>
+          <div class='bb-item-time'>{{item.time[0]+'~'+item.time[1]}}</div>
+        </div>
       </bb-col>
       <bb-col :span='2'>
         <p-check class="pretty p-image p-plain p-tada bb-item-check">
@@ -21,9 +23,9 @@
         </p-check>
       </bb-col>
     </div>
-    <div class='bb-item-add'>
+    <!-- <div class='bb-item-add'>
       <i class='iconfont bb-item-add-icon icon-tianjia'></i>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -43,7 +45,12 @@ export default {
     return {};
   },
   computed: {},
-  methods: {}
+  methods: {
+    detail(id) {
+      let path = '/item/detail/' + id;
+      this.$router.push(path);
+    }
+  }
 };
 </script>
 
@@ -51,7 +58,7 @@ export default {
 .bb-item-list {
   height: 100%;
   padding: 8px 0;
-  overflow: auto;
+  overflow-y: auto;
   .bb-item {
     height: 80px;
     width: 360px;
@@ -68,7 +75,6 @@ export default {
         height: 48px;
         width: 48px;
         margin: auto;
-        border-radius: 50%;
       }
     }
     .bb-item-process {
@@ -117,35 +123,35 @@ export default {
   }
 }
 
-.bb-item-add {
-  height: 80px;
-  width: 360px;
-  margin: 0 auto 4px auto;
-  padding: 4px;
-  border: 1px dashed #cccccc;
-  border-radius: 4px;
-  text-align: center;
-  line-height: 76px;
-  background-color: #ffffff;
-  .bb-item-add-icon {
-    font-size: 20px;
-  }
-}
+// .bb-item-add {
+//   height: 80px;
+//   width: 360px;
+//   margin: 0 auto 4px auto;
+//   padding: 4px;
+//   border: 1px dashed #cccccc;
+//   border-radius: 4px;
+//   text-align: center;
+//   line-height: 76px;
+//   background-color: #ffffff;
+//   .bb-item-add-icon {
+//     font-size: 20px;
+//   }
+// }
 
 .bb-item-icon-fitness {
-  background: url(./images/fitness.png);
+  background: url(../../assets/images/types/fitness.png);
 }
 .bb-item-icon-study {
-  background: url(./images/study.png);
+  background: url(../../assets/images/types/study.png);
 }
 .bb-item-icon-travel {
-  background: url(./images/travel.png);
+  background: url(../../assets/images/types/travel.png);
 }
 .bb-item-icon-rise {
-  background: url(./images/rise.png);
+  background: url(../../assets/images/types/rise.png);
 }
 .bb-item-icon-sleep {
-  background: url(./images/sleep.png);
+  background: url(../../assets/images/types/sleep.png);
 }
 // .bb-item-fitness {
 //   background: linear-gradient(to bottom, #fdd99a, #ff8692);

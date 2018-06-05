@@ -52,8 +52,9 @@ export default {
   .bb-info-item {
     text-align: center;
     span {
-      font-family: 'Candy_Number-webfont';
-      font-size: 30px;
+      display: block;
+      margin-top: 4px;
+      font-size: 24px;
       color: #4d4d4d;
     }
   }
